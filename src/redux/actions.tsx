@@ -73,7 +73,6 @@ export const addToDoInList = (todo: string) => {
         dispatch(addToDoInListSuccess(json));
       })
       .catch((error) => {
-        console.log(error);
         dispatch(addToDoInListError(error));
       });
   };
