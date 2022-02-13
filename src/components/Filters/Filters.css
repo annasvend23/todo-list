@@ -1,0 +1,9 @@
+.filters {
+  width: 90%;
+  margin: 0 auto 30px;
+  text-align: right;
+}
+
+.filters__title {
+  margin-top: 0;
+}

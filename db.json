@@ -1,19 +1,60 @@
 {
-  "posts": [
+  "todos": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "isDone": false,
+      "isFavourite": true,
+      "text": "1 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:29:16.583Z",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "isDone": false,
+      "isFavourite": true,
+      "text": "2 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:29:24.915Z",
+      "id": 2
+    },
+    {
+      "isDone": true,
+      "isFavourite": false,
+      "text": "3 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:29:30.714Z",
+      "id": 3
+    },
+    {
+      "isDone": true,
+      "isFavourite": false,
+      "text": "4 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:29:37.766Z",
+      "id": 4
+    },
+    {
+      "isDone": true,
+      "isFavourite": true,
+      "text": "5 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:29:42.815Z",
+      "id": 5
+    },
+    {
+      "isDone": true,
+      "isFavourite": true,
+      "text": "6 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:29:47.248Z",
+      "id": 6
+    },
+    {
+      "isDone": false,
+      "isFavourite": false,
+      "text": "7 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:30:29.447Z",
+      "id": 7
+    },
+    {
+      "isDone": false,
+      "isFavourite": false,
+      "text": "8 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias except",
+      "date": "2022-02-13T19:30:33.179Z",
+      "id": 8
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
