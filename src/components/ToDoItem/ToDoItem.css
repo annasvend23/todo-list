@@ -1,0 +1,46 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f3f4;
+  margin-bottom: 15px;
+  padding: 15px 15px;
+}
+
+.todo-item__left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.todo-item__text {
+  margin: 0 10px;
+  word-break: break-all;
+  font-size: 16px;
+}
+
+.todo-item__is-favourite,
+.todo-item__menu {
+  cursor: pointer;
+}
+
+.todo-item__is-done {
+  margin-right: 10px;
+}
+
+.todo-item__textarea {
+  border: 2px solid #4285f4;
+  border-radius: 2px;
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.todo-item__form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.textarea__prompt_in-todo-item {
+  margin-bottom: 0;
+}

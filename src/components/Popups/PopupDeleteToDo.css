@@ -1,0 +1,20 @@
+.popup__title {
+  margin-top: 0;
+}
+
+.popup__text {
+  word-break: break-all;
+}
+
+.popup__date {
+  margin-bottom: 30px;
+}
+
+.popup__buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup__button {
+  width: 47%;
+}
