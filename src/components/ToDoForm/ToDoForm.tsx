@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { charsLimit } from '../../constants';
 import { addToDoInList } from '../../redux/actions';
 import { validate } from '../../validate';
 import './ToDoForm.css';
 
-const ToDoForm: React.FC = () => {
+const ToDoForm: FC = () => {
   const [formValue, setFormValue] = useState('');
   const [formError, setFormError] = useState('');
   const dispatch = useDispatch();
@@ -47,7 +47,7 @@ const ToDoForm: React.FC = () => {
           value={formValue}
           onChange={handleChange}
           onKeyPress={handleKeyPress}
-        ></textarea>
+        />
         {!formError ? (
           <>
             <span className='textarea__prompt'>

@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { FC } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { IState, IToDoListFilters } from '../../interfaces/state';
 import { setVisibilityFilter } from '../../redux/actions';
 import './FilterButton.css';
@@ -9,7 +9,7 @@ type TProps = {
   filter: keyof IToDoListFilters;
 };
 
-const FilterButton: React.FC<TProps> = (props) => {
+const FilterButton: FC<TProps> = (props) => {
   const filters = useSelector((state: IState) => state.toDoListReducer.filters);
   const { text, filter } = props;
   const isActive = filters[filter];

@@ -1,8 +1,27 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { IState } from '../../interfaces/state';
+import { IToDoItem } from '../../interfaces/todo';
 import { deleteToDo, setPopupDeleteToDoActive } from '../../redux/actions';
 import './Popup.css';
 import './PopupDeleteToDo.css';
+
+const getDateText = (todo?: IToDoItem) => {
+  if (!todo || !todo.date) {
+    return 'не известно';
+  }
+
+  const date  = new Date(todo.date);
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  return `${day}.${
+    month < 10 ? `0${month}` : month
+  }.${year} в ${hours}:${minutes}:${seconds}`;
+};
 
 const PopupDeleteToDo = () => {
   const activeItemIdToDelete = useSelector(
@@ -12,17 +31,10 @@ const PopupDeleteToDo = () => {
     state.toDoListReducer.list.find((todo) => todo.id === activeItemIdToDelete)
   );
   const dispatch = useDispatch();
-  const date = todo && new Date(todo!.date);
-  const day = date && date.getDate();
-  const month = date && date.getMonth() + 1;
-  const year = date && date.getFullYear();
-  const hours = date && date.getHours();
-  const minutes = date && date.getMinutes();
-  const seconds = date && date.getSeconds();
 
   const handleDeleteClick = () => {
     if (activeItemIdToDelete) dispatch(deleteToDo(activeItemIdToDelete));
-    dispatch(setPopupDeleteToDoActive(null))
+    dispatch(setPopupDeleteToDoActive(null));
   };
 
   return (
@@ -38,14 +50,7 @@ const PopupDeleteToDo = () => {
           Вы действительно хотите удалить задачу?
         </h2>
         <p className='popup__text'>{todo && todo.text}</p>
-        <p className='popup__date'>
-          Создана:{' '}
-          {todo && month
-            ? `${day}.${
-                month < 10 ? `0${month}` : month
-              }.${year} в ${hours}:${minutes}:${seconds}`
-            : 'не известно'}{' '}
-        </p>
+        <p className='popup__date'>Создана: {getDateText(todo)}</p>
         <div className='popup__buttons-container'>
           <button
             className='button_not-active popup__button'

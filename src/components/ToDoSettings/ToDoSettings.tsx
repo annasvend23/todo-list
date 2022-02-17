@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { IState } from '../../interfaces/state';
 import { IToDoItem } from '../../interfaces/todo';
@@ -10,7 +10,7 @@ import {
 } from '../../redux/actions';
 import './ToDoSettings.css';
 
-const ToDoSettings: React.FC = () => {
+const ToDoSettings: FC = () => {
   const activeItemId = useSelector(
     (state: IState) => state.popupReducer.activeItemId
   );

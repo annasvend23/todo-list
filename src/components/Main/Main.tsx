@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { IState } from '../../interfaces/state';
 import { fetchToDoList } from '../../redux/actions';
@@ -7,7 +7,7 @@ import ToDoForm from '../ToDoForm/ToDoForm';
 import ToDoList from '../ToDoList/ToDoList';
 import './Main.css';
 
-const Main: React.FC = () => {
+const Main: FC = () => {
   const todos = useSelector((state: IState) => state.toDoListReducer.list);
   const dispatch = useDispatch();
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { IState } from '../../interfaces/state';
 import { IToDoItem } from '../../interfaces/todo';
@@ -15,7 +15,7 @@ type TProps = {
   todo: IToDoItem;
 };
 
-const ToDoItem: React.FC<TProps> = (props) => {
+const ToDoItem: FC<TProps> = (props) => {
   const editingId = useSelector(
     (state: IState) => state.toDoListReducer.editingId
   );
