@@ -13,10 +13,11 @@ const ToDoList: FC = () => {
   const toDoListFavourite = toDoList.filter(
     (todo) => !todo.isDone && todo.isFavourite
   );
-  const isToDoListShowAll = !filters.completed && !filters.favourite && !filters.todo;
+  const isToDoListShowAll =
+    !filters.completed && !filters.favourite && !filters.todo;
 
   return (
-    <ul className='todo-list'>
+    <ul className='todo-list' data-testid='todo-list'>
       {filters.completed &&
         toDoListDone.map((todo: IToDoItem) => (
           <ToDoItem todo={todo} key={todo.id} />
@@ -25,12 +26,14 @@ const ToDoList: FC = () => {
         toDoListNotDone.map((todo: IToDoItem) => (
           <ToDoItem todo={todo} key={todo.id} />
         ))}
-      {filters.favourite && toDoListFavourite.map((todo: IToDoItem) => (
+      {filters.favourite &&
+        toDoListFavourite.map((todo: IToDoItem) => (
           <ToDoItem todo={todo} key={todo.id} />
         ))}
-      {isToDoListShowAll && toDoList.map((todo: IToDoItem) => (
-        <ToDoItem todo={todo} key={todo.id} />
-      ))}
+      {isToDoListShowAll &&
+        toDoList.map((todo: IToDoItem) => (
+          <ToDoItem todo={todo} key={todo.id} />
+        ))}
     </ul>
   );
 };

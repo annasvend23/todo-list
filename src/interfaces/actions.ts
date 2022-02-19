@@ -34,7 +34,7 @@ export interface IFetchToDoListErrorAction {
 
 export interface ISetPopupActiveAction {
   type: typeof SET_POPUP_MENU_ACTIVE | typeof SET_POPUP_DELETE_TODO_ACTIVE;
-  payload: boolean;
+  payload: string | null;
 }
 
 export interface IUpdateToDoAction {

@@ -65,11 +65,12 @@ const ToDoItem: FC<TProps> = (props) => {
           />
         )}
         {!isEdit ? (
-          <p className='todo-item__text'>{todo.text}</p>
+          <p data-testid='text' className='todo-item__text'>{todo.text}</p>
         ) : (
-          <form className='todo-item__form'>
+          <form data-testid='form' className='todo-item__form'>
             <textarea
               className='todo-item__textarea'
+              data-testid='textarea'
               value={formValue}
               onChange={handleChange}
               onKeyPress={handleKeyPress}
