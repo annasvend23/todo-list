@@ -21,7 +21,7 @@ import {
 import { IToDoListReducerState } from '../../interfaces/state';
 import { IToDoItem } from '../../interfaces/todo';
 
-const initialState: IToDoListReducerState = {
+export const initialState: IToDoListReducerState = {
   loading: false,
   list: [],
   error: null,

@@ -19,8 +19,11 @@ import {
 import { IToDoItem } from '../interfaces/todo';
 import { Dispatch } from 'redux';
 import { IToDoListFilters } from '../interfaces/state';
+import { ISetPopupActiveAction } from '../interfaces/actions';
 
-export const setPopupMenuActive = (activeItemId: string | null) => ({
+export const setPopupMenuActive = (
+  activeItemId: string | null
+): ISetPopupActiveAction => ({
   type: SET_POPUP_MENU_ACTIVE,
   payload: activeItemId,
 });
@@ -38,7 +41,7 @@ export const setEditingId = (editingId: string | null) => ({
 export const setVisibilityFilter = (filter: keyof IToDoListFilters) => ({
   type: SET_VISIBILITY_FILTER,
   payload: filter,
-})
+});
 
 export const addToDoInListStarted = () => ({
   type: ADD_TODO_IN_LIST_STARTED,

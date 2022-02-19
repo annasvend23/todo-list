@@ -1,7 +1,7 @@
 import { ISetPopupActiveAction } from '../../interfaces/actions';
 import { SET_POPUP_DELETE_TODO_ACTIVE, SET_POPUP_MENU_ACTIVE } from '../types';
 
-const initialState = {
+export const initialState = {
   activeItemId: null,
   activeItemIdToDelete: null,
 };
